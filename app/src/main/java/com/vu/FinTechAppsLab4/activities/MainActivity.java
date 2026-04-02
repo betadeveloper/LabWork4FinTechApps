@@ -1,4 +1,4 @@
-package com.vu.FinTechAppsLab4;
+package com.vu.FinTechAppsLab4.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,6 +18,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.vu.FinTechAppsLab4.R;
+import com.vu.FinTechAppsLab4.model.Note;
+import com.vu.FinTechAppsLab4.utils.NoteHelper;
 
 import java.util.List;
 
@@ -55,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         fabCreateNote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AddNoteActivity.class);
+                Intent intent = new Intent(MainActivity.this, com.vu.FinTechAppsLab4.activities.AddNoteActivity.class);
                 startActivity(intent);
             }
         });
@@ -63,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         fabDeleteNote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, DeleteNoteActivity.class);
+                Intent intent = new Intent(MainActivity.this, com.vu.FinTechAppsLab4.activities.DeleteNoteActivity.class);
                 startActivity(intent);
             }
         });
@@ -78,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Note selectedNote = notesList.get(position);
-                Intent intent = new Intent(MainActivity.this, ViewNoteActivity.class);
+                Intent intent = new Intent(MainActivity.this, com.vu.FinTechAppsLab4.activities.ViewNoteActivity.class);
                 intent.putExtra("note", selectedNote);
                 startActivity(intent);
             }
@@ -125,11 +128,11 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.action_create_note) {
-            Intent intent = new Intent(this, AddNoteActivity.class);
+            Intent intent = new Intent(this, com.vu.FinTechAppsLab4.activities.AddNoteActivity.class);
             startActivity(intent);
             return true;
         } else if (id == R.id.action_delete_note) {
-            Intent intent = new Intent(this, DeleteNoteActivity.class);
+            Intent intent = new Intent(this, com.vu.FinTechAppsLab4.activities.DeleteNoteActivity.class);
             startActivity(intent);
             return true;
         }

@@ -1,4 +1,4 @@
-package com.vu.FinTechAppsLab4;
+package com.vu.FinTechAppsLab4.activities;
 
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +11,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.vu.FinTechAppsLab4.R;
+import com.vu.FinTechAppsLab4.model.Note;
+import com.vu.FinTechAppsLab4.utils.NoteHelper;
 
 public class AddNoteActivity extends AppCompatActivity {
     private EditText editTextNoteName;

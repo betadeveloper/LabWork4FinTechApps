@@ -1,4 +1,4 @@
-package com.vu.FinTechAppsLab4;
+package com.vu.FinTechAppsLab4.model;
 
 import java.io.Serializable;
 
