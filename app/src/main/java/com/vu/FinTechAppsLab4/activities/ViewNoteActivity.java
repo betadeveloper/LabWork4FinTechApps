@@ -30,14 +30,11 @@ public class ViewNoteActivity extends AppCompatActivity {
         textViewNoteName = findViewById(R.id.textViewNoteName);
         textViewNoteContent = findViewById(R.id.textViewNoteContent);
 
-        // Get the note from intent
         Note note = (Note) getIntent().getSerializableExtra("note");
         
         if (note != null) {
             textViewNoteName.setText(note.getName());
             textViewNoteContent.setText(note.getContent());
-            
-            // Set the activity title to the note name
             setTitle(note.getName());
         }
     }

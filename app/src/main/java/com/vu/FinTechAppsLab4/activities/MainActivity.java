@@ -113,7 +113,6 @@ public class MainActivity extends AppCompatActivity {
             textViewEmptyMessage.setVisibility(View.GONE);
             fabDeleteNote.setVisibility(View.VISIBLE);
         }
-        // Create button is always visible
         fabCreateNote.setVisibility(View.VISIBLE);
     }
 
